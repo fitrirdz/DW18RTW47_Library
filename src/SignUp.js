@@ -42,7 +42,7 @@ const SignUp = ({ isShowing, toggle }) => {
         <Button className="btn btn-block" variant="danger" type="submit">
           Submit
         </Button>
-        <p>
+        <p style={{textAlign: "center"}}>
           Already have an account ? Klik <a href="#">Here</a>
         </p>
       </Modal.Body>
