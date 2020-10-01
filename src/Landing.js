@@ -13,14 +13,17 @@ const Landing = () => {
       <Container>
         <Row>
           {/* Kolom Menu */}
-          <Col>
+          <Col className="mt-5">
             <div>
               <img
-                className="Student float-left"
-                style={{ height: "50px", width: "50px" }}
+                className="Student"
                 src={require("./images/student1.svg")}
               ></img>
-              <h3 className="Library float-left">Lib'rary</h3>
+              <img
+                className="Library"
+                src={require("./images/Library.svg")}
+              ></img>
+              {/* <h3 className="Library float-left">Lib'rary</h3> */}
             </div>
             <div style={{ marginTop: "200px" }}>
               <h1>
