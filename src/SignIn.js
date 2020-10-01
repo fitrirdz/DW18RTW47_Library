@@ -18,7 +18,7 @@ const SignIn = ({ showSignIn, toggleSignIn }) => {
         <Button className="btn btn-block" variant="danger" type="submit">
           Sign In
         </Button>
-        <p>
+        <p style={{textAlign: "center"}}>
           Don't have an account ? Klik <a href="#">Here</a>
         </p>
       </Modal.Body>
