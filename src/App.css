@@ -28,8 +28,13 @@
   color: #61dafb;
 }
 
+.Button-o {
+  background-color: orange;
+  color: white;
+}
+
 .Library {
-  position: absolute;
+  float: left;
   width: 125px;
   height: 41px;
   left: 128px;
@@ -45,12 +50,14 @@
 }
 
 .Student {
-  position: absolute;
+  float: left;
   width: 50px;
   height: 50px;
   left: 78px;
   top: 37px;
   height: 50px;
+  border: 3px;
+  border-color: white;
 }
 
 @keyframes App-logo-spin {

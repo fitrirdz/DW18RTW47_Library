@@ -1,8 +1,8 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import SignUp from "./SignUp";
-import SignIn from "./SignIn";
-import UseModal from "./UseModal";
+import SignUp from "../components/SignUp";
+import SignIn from "../components/SignIn";
+import UseModal from "../components/UseModal";
 
 const Landing = () => {
   const { isShowing, toggle } = UseModal();
@@ -10,20 +10,19 @@ const Landing = () => {
 
   return (
     <div className="App">
-      <Container>
+      <div className="container-fluid">
         <Row>
           {/* Kolom Menu */}
           <Col className="mt-5">
             <div>
               <img
                 className="Student"
-                src={require("./images/student1.svg")}
+                src={require("../images/student1.svg")}
               ></img>
               <img
                 className="Library"
-                src={require("./images/Library.svg")}
+                src={require("../images/Library.svg")}
               ></img>
-              {/* <h3 className="Library float-left">Lib'rary</h3> */}
             </div>
             <div style={{ marginTop: "200px" }}>
               <h1>
@@ -35,12 +34,12 @@ const Landing = () => {
               </p>
             </div>
             <div>
-              <Button variant="danger" onClick={toggle}>
+              <button className="btn Button-o" onClick={toggle}>
                 Sign Up
-              </Button>
-              <Button variant="light" onClick={toggleSignIn}>
+              </button>
+              <button className="btn bg-light" onClick={toggleSignIn}>
                 Sign In
-              </Button>
+              </button>
 
               <SignUp isShowing={isShowing} toggle={toggle} />
               <SignIn showSignIn={showSignIn} toggleSignIn={toggleSignIn} />
@@ -50,12 +49,12 @@ const Landing = () => {
           {/* Kolom Gambar */}
           <Col>
             <img
-              src={require("./images/Vector1.svg")}
+              src={require("../images/Vector1.svg")}
               style={{ margin: "0" }}
             ></img>
           </Col>
         </Row>
-      </Container>
+      </div>
     </div>
   );
 };
