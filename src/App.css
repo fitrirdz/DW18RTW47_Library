@@ -51,13 +51,13 @@
 }
 
 .Button-o {
-  padding: 15px 25px;
+  padding: 8px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color: orangered;
+  background-color: #ee4622;
   border: none;
   border-radius: 8px;
 }
@@ -75,6 +75,23 @@
 .Button-g:focus,
 .Button-o:focus {
   outline: 0;
+}
+
+.cover-tile-image {
+  text-align: right;
+  padding-right: 3px;
+}
+
+.cover-tile-text {
+  padding-left: 3px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.icon {
+  color: gray;
+  height: 2.5rem;
+  width: auto;
 }
 
 .Library {

@@ -71,7 +71,7 @@ const DetailBuku = () => {
             </div>
             <div class="d-flex flex-row-reverse">
               <button className="Button-g">Read Book</button>
-              <button className="Button-o">Add Library</button>
+              <button className="Button-o mr-1">Add Library</button>
             </div>
           </div>
         </div>
