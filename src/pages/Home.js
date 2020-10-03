@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import SideBar from "../components/SideBar";
+import { Link } from "react-router-dom";
 import { Container, Row, Col, Image, Jumbotron, Button } from "react-bootstrap";
+import { CartContext } from "../context/cartContext";
 
 const Home = () => {
+  // Ambil data dari cartContext
+  const [state, dispatch] = useContext(CartContext);
+
   // Data Buku
   const books = [
     {
@@ -71,17 +76,24 @@ const Home = () => {
               {books.map((books) => (
                 <div className="col-sm-3">
                   <div className="card" style={{ border: "none" }}>
-                    <img class="card-img-top" alt="..." src={books.image}></img>
-                    <div className="card-body">
-                      <h4 class="card-title">{books.title}</h4>
-                      <p class="card-text">{books.author}</p>
-                    </div>
+                    <Link to="/detailbuku" style={{ color: "black" }}>
+                      <img
+                        class="card-img-top"
+                        alt="..."
+                        src={books.image}
+                      ></img>
+                      <h5 class="card-title py-2">{books.title}</h5>
+                    </Link>
+                    <p class="card-text subtitle">{books.author}</p>
                   </div>
                 </div>
               ))}
             </div>
           </Col>
         </Row>
+        {/* <Row>
+          <div>{JSON.stringify(state)}</div>
+        </Row> */}
       </Container>
     </div>
   );

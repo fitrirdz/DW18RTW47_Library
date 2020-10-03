@@ -28,9 +28,53 @@
   color: #61dafb;
 }
 
+.Button-g {
+  padding: 15px 25px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  background-color: lightgray;
+  border: none;
+  border-radius: 8px;
+}
+
+.Button-g:hover {
+  background-color: gray;
+}
+
+.Button-g:active {
+  background-color: lightgray;
+  /* box-shadow: 0 5px #666; */
+  transform: translateY(4px);
+}
+
 .Button-o {
+  padding: 15px 25px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: orangered;
+  border: none;
+  border-radius: 8px;
+}
+
+.Button-o:hover {
   background-color: orange;
-  color: white;
+}
+
+.Button-o:active {
+  background-color: orange;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.Button-g:focus,
+.Button-o:focus {
+  outline: 0;
 }
 
 .Library {
@@ -58,6 +102,11 @@
   height: 50px;
   border: 3px;
   border-color: white;
+}
+
+.subtitle {
+  color: gray;
+  text-align: justify;
 }
 
 @keyframes App-logo-spin {

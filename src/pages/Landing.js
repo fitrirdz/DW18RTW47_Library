@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import SignUp from "../components/SignUp";
 import SignIn from "../components/SignIn";
 import UseModal from "../components/UseModal";
@@ -18,10 +18,12 @@ const Landing = () => {
               <img
                 className="Student"
                 src={require("../images/student1.svg")}
+                alt="images"
               ></img>
               <img
                 className="Library"
                 src={require("../images/Library.svg")}
+                alt="images"
               ></img>
             </div>
             <div style={{ marginTop: "200px" }}>
