@@ -1,15 +1,16 @@
 import React, { useContext } from "react";
-import { Route, Redirect } from "react-router-dom";
+import { Route, Redirect, useHistory } from "react-router-dom";
 import { CartContext } from "../context/cartContext";
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
-  const [state] = useContext(CartContext);
+  const [state, dispatch] = useContext(CartContext);
+  const history = useHistory();
 
   return (
     <Route
       {...rest}
-      render={() =>
-        state.isLogin ? <Redirect to="/" /> : <Redirect to="/landing" />
+      render={(props) =>
+        state.isLogin ? history.replace("/") : <Redirect to="/landing" />
       }
     />
   );

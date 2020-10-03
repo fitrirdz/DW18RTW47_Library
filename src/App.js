@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import { CartContextProvider } from "./context/cartContext";
 
 import Home from "./pages/Home";
@@ -16,8 +16,8 @@ const App = () => {
     <CartContextProvider>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={Home} />
           <Route exact path="/landing" component={Landing} />
+          <Route exact path="/" component={Home} />
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/mylibrary" component={MyLibrary} />
           <Route exact path="/addbook" component={AddBook} />

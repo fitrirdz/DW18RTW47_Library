@@ -21,7 +21,9 @@ const SignUp = ({ isShowing, toggle }) => {
 
           <Form.Group controlId="exampleForm.ControlSelect1">
             <Form.Control as="select" defaultValue="Gender required">
-              <option defaultValue>Gender</option>
+              <option selected disabled value="">
+                Gender
+              </option>
               <option value="male">Male</option>
               <option value="female">Female</option>
             </Form.Control>
@@ -42,7 +44,7 @@ const SignUp = ({ isShowing, toggle }) => {
         <Button className="btn btn-block" variant="danger" type="submit">
           Submit
         </Button>
-        <p style={{textAlign: "center"}}>
+        <p style={{ textAlign: "center" }}>
           Already have an account ? Klik <a href="#">Here</a>
         </p>
       </Modal.Body>
