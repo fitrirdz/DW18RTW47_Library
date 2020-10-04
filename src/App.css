@@ -1,3 +1,7 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+
 .App {
   text-align: center;
 }
@@ -29,7 +33,7 @@
 }
 
 .Button-g {
-  padding: 15px 25px;
+  padding: 10px 15px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -38,6 +42,7 @@
   background-color: lightgray;
   border: none;
   border-radius: 8px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .Button-g:hover {
@@ -51,7 +56,7 @@
 }
 
 .Button-o {
-  padding: 8px;
+  padding: 10px 15px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -60,6 +65,7 @@
   background-color: #ee4622;
   border: none;
   border-radius: 8px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .Button-o:hover {
@@ -95,16 +101,15 @@
 }
 
 .jumbo {
-  position: absolute;
-  width: 472px;
-  height: 194px;
   left: 78px;
   top: 99px;
+  margin-top: 1.3em;
+  margin-bottom: 0.2em;
 
   font-family: Times New Roman;
   font-style: normal;
   font-weight: bold;
-  font-size: 96px;
+  font-size: 50px;
   line-height: 101.5%;
   /* or 97px */
 
@@ -112,24 +117,18 @@
 }
 
 .landing-text {
-  position: absolute;
-  width: 200px;
+  width: 500px;
   height: auto;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
 
   font-family: Times New Roman;
-  font-style: italic;
   font-weight: bold;
-  font-size: 110px;
+  font-size: 91px;
   line-height: 82.49%;
   /* or 91px */
 
   color: #000000;
-}
-
-.landing-page {
-  background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg");
-  background-repeat: no-repeat;
-  background-size: 50% 100%;
 }
 
 .logos {
@@ -145,10 +144,12 @@
   top: 0px;
 
   background: #ffffff;
+  font-family: "Times New Roman", Times, serif;
 }
 .subtitle {
   color: gray;
   text-align: justify;
+  font-family: "Times New Roman", Times, serif;
 }
 
 @keyframes App-logo-spin {
@@ -158,4 +159,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Sidebar */
+.nav-item {
+  color: gray;
 }

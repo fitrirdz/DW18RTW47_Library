@@ -1,33 +1,44 @@
 import React from "react";
-import { Image, ListGroup } from "react-bootstrap";
+import { ListGroup } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const SideBar = () => {
   return (
     <div>
-      <div>
-        <img src={require("../images/Logo.svg")}></img>
+      <div className="row">
+        <Link to="/home">
+          <img src={require("../images/Logo.svg")}></img>
+        </Link>
         <br></br>
       </div>
 
-      <div>
-        <br></br>
-        <Image
-          className="shadow"
-          src={require("../images/Toothless.jpg")}
-          style={{ height: "75px", width: "75px" }}
-          roundedCircle
-        />
-        <h4>Fitri Ratna Dewi</h4>
+      <div className="row my-3">
+        <div className="col-12">
+          <div className="row justify-content-center">
+            <img
+              className="shadow"
+              src={require("../images/Toothless.jpg")}
+              style={{
+                height: "75px",
+                width: "75px",
+                borderRadius: "50%",
+              }}
+            />
+          </div>
+          <div className="row justify-content-center">
+            <h4>Fitri Ratna Dewi</h4>
+          </div>
+        </div>
       </div>
       <hr></hr>
       <ListGroup variant="flush">
-        <ListGroup.Item>
+        <ListGroup.Item className="mt-2" style={{ border: "none" }}>
           <span>
             <svg
+              className="icon mr-2"
               style={{
-                width: "24px",
-                height: "24px",
+                width: "30px",
+                height: "30px",
                 viewBox: "0 0 24 24",
               }}
             >
@@ -41,12 +52,13 @@ const SideBar = () => {
             Profile
           </Link>
         </ListGroup.Item>
-        <ListGroup.Item>
+        <ListGroup.Item className="mt-2" style={{ border: "none" }}>
           <span>
             <svg
+              className="icon mr-2"
               style={{
-                width: "24px",
-                height: "24px",
+                width: "30px",
+                height: "30px",
                 viewBox: "0 0 24 24",
               }}
             >
@@ -60,12 +72,13 @@ const SideBar = () => {
             My Library
           </Link>
         </ListGroup.Item>
-        <ListGroup.Item>
+        <ListGroup.Item className="mt-2" style={{ border: "none" }}>
           <span>
             <svg
+              className="icon mr-2"
               style={{
-                width: "24px",
-                height: "24px",
+                width: "30px",
+                height: "30px",
                 viewBox: "0 0 24 24",
               }}
             >
@@ -76,15 +89,17 @@ const SideBar = () => {
             </svg>
           </span>
           <Link className="nav-item" to="/addbook">
-            Add Book
+            Add Books
           </Link>
+          <hr></hr>
         </ListGroup.Item>
-        <ListGroup.Item>
+        <ListGroup.Item className="mt-2" style={{ border: "none" }}>
           <span>
             <svg
+              className="icon mr-2"
               style={{
-                width: "24px",
-                height: "24px",
+                width: "30px",
+                height: "30px",
                 viewBox: "0 0 24 24",
               }}
             >

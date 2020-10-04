@@ -51,21 +51,25 @@ const Home = () => {
 
           {/* Grid 9 untuk konten */}
           <Col xs={9}>
-            <Jumbotron fluid style={{ padding: "0", background: "#E6F2FD;" }}>
+            <Jumbotron fluid style={{ padding: "0", background: "#E6F2FD" }}>
               <Container>
                 <Row>
-                  <Col xs={8} className="mt-5 my-3">
+                  <div className="col-8 mt-5 my-3">
                     <h1 className="jumbo">
                       Share, read, and <i>love</i>
                     </h1>
-                    <p>Reading is fascinating</p>
-                  </Col>
-                  <Col xs={4} className="my-3">
+                    <h5>Reading is fascinating</h5>
+                  </div>
+                  <div className="col-4 my-3">
                     <Image
                       src={require("../images/FixYou.svg")}
-                      style={{ height: "200px", width: "auto" }}
+                      style={{
+                        height: "300px",
+                        width: "auto",
+                        textAlign: "center",
+                      }}
                     ></Image>
-                  </Col>
+                  </div>
                 </Row>
               </Container>
             </Jumbotron>
@@ -86,13 +90,13 @@ const Home = () => {
                   <div className="card" style={{ border: "none" }}>
                     <Link to="/detailbuku" style={{ color: "black" }}>
                       <img
-                        class="card-img-top"
+                        className="card-img-top"
                         alt="..."
                         src={books.image}
                       ></img>
-                      <h5 class="card-title py-2">{books.title}</h5>
+                      <h5 className="card-title py-2">{books.title}</h5>
                     </Link>
-                    <p class="card-text subtitle">{books.author}</p>
+                    <p className="card-text subtitle">{books.author}</p>
                   </div>
                 </div>
               ))}

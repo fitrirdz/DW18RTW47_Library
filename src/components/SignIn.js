@@ -1,8 +1,13 @@
 import React, { useState, useContext } from "react";
 import { CartContext } from "../context/cartContext";
 import { Modal } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import UseModal from "../components/UseModal";
+import SignUp from "./SignUp";
 
 const SignIn = ({ showSignIn, toggleSignIn }) => {
+  const { isShowing, toggle } = UseModal();
+
   const [state, dispatch] = useContext(CartContext);
 
   const [formData, setFormData] = useState({
@@ -19,7 +24,7 @@ const SignIn = ({ showSignIn, toggleSignIn }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(email + ":" + password);
-    if (email === "fitri@mail.com" && password === "1111") {
+    if (email === "frd@mail.com" && password === "1111") {
       console.log("Berhasil");
       dispatch({
         type: "LOGIN",
@@ -37,6 +42,7 @@ const SignIn = ({ showSignIn, toggleSignIn }) => {
           <div className="form-group">
             <input
               type="email"
+              className="form-control"
               placeholder="Email"
               name="email"
               value={email}
@@ -48,6 +54,7 @@ const SignIn = ({ showSignIn, toggleSignIn }) => {
           <div className="form-group">
             <input
               type="password"
+              className="form-control"
               placeholder="Password"
               name="password"
               value={password}
@@ -56,15 +63,27 @@ const SignIn = ({ showSignIn, toggleSignIn }) => {
             />
           </div>
           <div className="form-group">
-            <button className="btn btn-danger btn-block" type="submit">
-              Sign In
-            </button>
+            <Link to="/home">
+              <button
+                className="Button-o"
+                type="submit"
+                style={{ width: "100%" }}
+              >
+                Sign In
+              </button>
+            </Link>
           </div>
         </form>
         <p style={{ textAlign: "center" }}>
-          Don't have an account ? Klik <a href="#">Here</a>
+          Don't have an account ? Click{" "}
+          <a href="#" onClick={toggle}>
+            Here
+          </a>
         </p>
-        <h1 className="text-success">{state.isLogin ? "BERHASIL" : "GAGAL"}</h1>
+        <SignUp isShowing={isShowing} toggle={toggle} />
+        {/* <h1 className="text-success">
+          {state.isLogin ? "LOGIN STATE" : "NOPE"}
+        </h1> */}
       </Modal.Body>
     </Modal>
   );

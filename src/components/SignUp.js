@@ -1,7 +1,11 @@
 import React from "react";
-import { Button, Modal, Form } from "react-bootstrap";
+import { Modal, Form } from "react-bootstrap";
+import UseModal from "./UseModal";
+import SignIn from "./SignIn";
 
 const SignUp = ({ isShowing, toggle }) => {
+  const { showSignIn, toggleSignIn } = UseModal();
+
   return (
     <Modal show={isShowing} keyboard={false} centered onHide={toggle}>
       <Modal.Body>
@@ -41,11 +45,15 @@ const SignUp = ({ isShowing, toggle }) => {
             />
           </Form.Group>
         </Form>
-        <Button className="btn btn-block" variant="danger" type="submit">
+        <button className="Button-o" type="submit" style={{ width: "100%" }}>
           Submit
-        </Button>
+        </button>
         <p style={{ textAlign: "center" }}>
-          Already have an account ? Klik <a href="#">Here</a>
+          Already have an account ? Click{" "}
+          <a href="#" onClick={toggleSignIn}>
+            Here
+          </a>
+          <SignIn showSignIn={showSignIn} toggleSignIn={toggleSignIn} />
         </p>
       </Modal.Body>
     </Modal>
