@@ -17,16 +17,20 @@ const NavBar = () => {
           className="float-sm-right"
         >
           <Dropdown.Item eventKey="1">
-            <img src={require("../images/book.svg")} className="pr-2"></img>Add
-            Book
+            <Link to="/addbookadmin">
+              <img src={require("../images/book.svg")} className="pr-2"></img>
+              Add Book
+            </Link>
           </Dropdown.Item>
           <Dropdown.Divider />
           <Dropdown.Item eventKey="2">
-            <img
-              src={require("../images/logoutAdmin.svg")}
-              className="pr-2"
-            ></img>
-            Logout
+            <Link to="/landing">
+              <img
+                src={require("../images/logoutAdmin.svg")}
+                className="pr-2"
+              ></img>
+              Logout
+            </Link>
           </Dropdown.Item>
         </DropdownButton>
       </nav>

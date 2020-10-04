@@ -10,7 +10,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
     <Route
       {...rest}
       render={(props) =>
-        state.isLogin ? history.replace("/") : <Redirect to="/landing" />
+        state.isLogin ? history.push("/") : <Redirect to="/landing" />
       }
     />
   );

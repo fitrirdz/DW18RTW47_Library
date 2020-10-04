@@ -15,24 +15,27 @@ const AddBook = () => {
             </div>
             <div className="row-sm-3">
               <form>
-                <div class="form-group">
+                <div className="form-group">
                   <input
                     placeholder="Title"
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     required
                   ></input>
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                   <input
                     placeholder="Publication Date"
                     type="date"
-                    class="form-control"
+                    className="form-control"
                     required
                   ></input>
                 </div>
-                <div class="form-group">
-                  <select class="form-control" id="exampleFormControlSelect1">
+                <div className="form-group">
+                  <select
+                    className="form-control"
+                    id="exampleFormControlSelect1"
+                  >
                     <option selected disabled value="">
                       Category
                     </option>
@@ -42,38 +45,38 @@ const AddBook = () => {
                     <option>Autobiography</option>
                   </select>
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                   <input
                     placeholder="Pages"
                     type="number"
-                    class="form-control"
+                    className="form-control"
                     required
                   ></input>
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                   <input
                     placeholder="ISBN"
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     required
                   ></input>
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                   <textarea
-                    class="form-control"
+                    className="form-control"
                     id="exampleFormControlTextarea1"
                     rows="7"
                     placeholder="About This Book"
                   ></textarea>
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                   <input
                     type="file"
-                    class="form-control-file"
+                    className="form-control-file"
                     placeholder="Attache Book File"
                   ></input>
                 </div>
-                <button type="submit" class="Button-o">
+                <button type="submit" className="Button-o float-right">
                   Submit
                 </button>
               </form>

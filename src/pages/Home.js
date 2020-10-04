@@ -1,34 +1,42 @@
 import React, { useContext } from "react";
 import SideBar from "../components/SideBar";
 import { Link } from "react-router-dom";
-import { Container, Row, Col, Image, Jumbotron, Button } from "react-bootstrap";
-import { CartContext } from "../context/cartContext";
+import { Container, Row, Col, Image, Jumbotron } from "react-bootstrap";
 
 const Home = () => {
-  // Ambil data dari cartContext
-  const [state, dispatch] = useContext(CartContext);
-
   // Data Buku
   const books = [
     {
       title: "What if? Absurd question",
       author: "Randall Munroe",
+      ISBN: "9781789807554",
       image: require("../images/WhatIf.svg"),
+      ebook: "what if? absurd Question.pdf",
+      status: "Approve",
     },
     {
       title: "Glyph: New look on things",
       author: "Morris Williamson",
+      ISBN: "9781789807555",
       image: require("../images/Glyph.svg"),
+      ebook: "Glyph.pdf",
+      status: "Approve",
     },
     {
       title: "Harry Potter and Goblet of fire",
       author: "J. K. Rowling",
+      ISBN: "9781789807666",
       image: require("../images/HarryPotter.svg"),
+      ebook: "Harrypoter.pdf",
+      status: "Cancel",
     },
     {
       title: "Tess on the Road",
       author: "Rachel Hartman",
+      ISBN: "9781789807576",
       image: require("../images/TessRoad.svg"),
+      ebook: "Harrypoter.pdf",
+      status: "Waiting to be verified",
     },
   ];
 
