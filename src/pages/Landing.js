@@ -27,7 +27,7 @@ const Landing = () => {
               ></img>
             </div>
             <div style={{ marginTop: "200px" }}>
-              <h1>
+              <h1 className="landing-text">
                 <i>Your</i> library anywhere
               </h1>
               <p>

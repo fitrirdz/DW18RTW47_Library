@@ -1,14 +1,12 @@
 import React from "react";
 import { Image, ListGroup } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Classes from "../App.css";
 
 const SideBar = () => {
   return (
     <div>
       <div>
-        <img className="Student" src={require("../images/student1.svg")}></img>
-        <img className="Library" src={require("../images/Library.svg")}></img>
+        <img src={require("../images/Logo.svg")}></img>
         <br></br>
       </div>
 

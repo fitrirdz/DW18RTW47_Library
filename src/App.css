@@ -94,33 +94,54 @@
   width: auto;
 }
 
-.Library {
-  float: left;
-  width: 125px;
-  height: 41px;
-  left: 128px;
-  top: 45px;
+.jumbo {
+  position: absolute;
+  width: 472px;
+  height: 194px;
+  left: 78px;
+  top: 99px;
 
   font-family: Times New Roman;
-  font-style: italic;
+  font-style: normal;
   font-weight: bold;
-  font-size: 36px;
-  line-height: 41px;
+  font-size: 96px;
+  line-height: 101.5%;
+  /* or 97px */
 
   color: #000000;
 }
 
-.Student {
-  float: left;
-  width: 50px;
-  height: 50px;
+.landing-text {
+  position: absolute;
+  width: 572px;
+  height: 182px;
   left: 78px;
-  top: 37px;
-  height: 50px;
-  border: 3px;
-  border-color: white;
+  top: 235px;
+
+  font-family: Times New Roman;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 110px;
+  line-height: 82.49%;
+  /* or 91px */
+
+  color: #000000;
 }
 
+.logos {
+  width: 25px;
+  height: auto;
+}
+
+.navigasi {
+  position: absolute;
+  width: 1440px;
+  height: 120px;
+  left: 0px;
+  top: 0px;
+
+  background: #ffffff;
+}
 .subtitle {
   color: gray;
   text-align: justify;

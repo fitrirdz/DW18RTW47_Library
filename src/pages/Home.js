@@ -43,11 +43,11 @@ const Home = () => {
 
           {/* Grid 9 untuk konten */}
           <Col xs={9}>
-            <Jumbotron fluid style={{ padding: "0" }}>
+            <Jumbotron fluid style={{ padding: "0", background: "#E6F2FD;" }}>
               <Container>
                 <Row>
                   <Col xs={8} className="mt-5 my-3">
-                    <h1>
+                    <h1 className="jumbo">
                       Share, read, and <i>love</i>
                     </h1>
                     <p>Reading is fascinating</p>
@@ -67,7 +67,7 @@ const Home = () => {
                 <h3>List Book</h3>
               </Col>
               <Col style={{ textAlign: "right" }}>
-                <Button>Category</Button>
+                <button className="btn btn-light">Category</button>
               </Col>
             </Row>
 
