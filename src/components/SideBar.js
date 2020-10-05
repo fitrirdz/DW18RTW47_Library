@@ -109,7 +109,7 @@ const SideBar = () => {
               />
             </svg>
           </span>
-          <Link className="nav-item" to="/landing">
+          <Link className="nav-item" to="/">
             Logout
           </Link>
         </ListGroup.Item>

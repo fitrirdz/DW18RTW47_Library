@@ -6,13 +6,13 @@ const NavBar = () => {
   return (
     <div>
       <nav className="navbar bg-white px-0">
-        <Link className="navbar-brand" to="/">
+        <Link className="navbar-brand" to="/home">
           <img src={require("../images/Logo.svg")} alt=""></img>
         </Link>
 
         <DropdownButton
           alignRight
-          title="Admin"
+          title="User"
           id="dropdown-menu-align-right"
           className="float-sm-right"
         >
@@ -24,7 +24,7 @@ const NavBar = () => {
           </Dropdown.Item>
           <Dropdown.Divider />
           <Dropdown.Item eventKey="2">
-            <Link to="/landing">
+            <Link to="/">
               <img
                 src={require("../images/logoutAdmin.svg")}
                 className="pr-2"

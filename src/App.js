@@ -20,7 +20,7 @@ const App = () => {
     <CartContextProvider>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/landing" component={Landing} />
+          <Route exact path="/" component={Landing} />
           <Route exact path="/home" component={Home} />
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/mylibrary" component={MyLibrary} />

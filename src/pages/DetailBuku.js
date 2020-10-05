@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import SideBar from "../components/SideBar";
+import { Link } from "react-router-dom";
 
 const DetailBuku = () => {
   return (
@@ -72,7 +73,9 @@ const DetailBuku = () => {
               </article>
             </div>
             <div class="d-flex flex-row-reverse">
-              <button className="Button-g">Read Book</button>
+              <Link to="/baca">
+                <button className="Button-g">Read Book</button>
+              </Link>
               <button className="Button-o mr-1">Add Library</button>
             </div>
           </div>
