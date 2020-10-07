@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import { CartContextProvider } from "./context/cartContext";
-import Classes from "./App.css";
 
 import Landing from "./pages/Landing";
 import Home from "./pages/Home";
@@ -13,7 +12,7 @@ import Baca from "./pages/Baca";
 import AdminPage from "./pages/AdminPage";
 import AddBookAdmin from "./pages/AddBookAdmin";
 
-// import PrivateRoute from "./components/PrivateRoute";
+import PrivateRoute from "./components/PrivateRoute";
 
 const App = () => {
   return (
@@ -21,14 +20,14 @@ const App = () => {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Landing} />
-          <Route exact path="/home" component={Home} />
-          <Route exact path="/profile" component={Profile} />
-          <Route exact path="/mylibrary" component={MyLibrary} />
-          <Route exact path="/addbook" component={AddBook} />
-          <Route exact path="/detailbuku" component={DetailBuku} />
-          <Route exact path="/baca" component={Baca} />
-          <Route exact path="/adminpage" component={AdminPage} />
-          <Route exact path="/addbookadmin" component={AddBookAdmin} />
+          <PrivateRoute exact path="/home" component={Home} />
+          <PrivateRoute exact path="/profile" component={Profile} />
+          <PrivateRoute exact path="/mylibrary" component={MyLibrary} />
+          <PrivateRoute exact path="/addbook" component={AddBook} />
+          <PrivateRoute exact path="/detailbuku" component={DetailBuku} />
+          <PrivateRoute exact path="/baca" component={Baca} />
+          <PrivateRoute exact path="/adminpage" component={AdminPage} />
+          <PrivateRoute exact path="/addbookadmin" component={AddBookAdmin} />
         </Switch>
       </BrowserRouter>
     </CartContextProvider>

@@ -30,14 +30,14 @@ const Landing = () => {
             <div className="row">
               <button
                 className="Button-o mt-3 mr-3"
-                style={{ width: "45%" }}
+                style={{ width: "30%" }}
                 onClick={toggle}
               >
                 Sign Up
               </button>
               <button
                 className="Button-g mt-3"
-                style={{ width: "45%" }}
+                style={{ width: "30%" }}
                 onClick={toggleSignIn}
               >
                 Sign In

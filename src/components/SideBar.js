@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { ListGroup } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { CartContext } from "../context/cartContext";
 
 const SideBar = () => {
+  const [state, dispatch] = useContext(CartContext);
+
   return (
     <div>
       <div className="row">
@@ -109,9 +112,17 @@ const SideBar = () => {
               />
             </svg>
           </span>
-          <Link className="nav-item" to="/">
+          <a
+            className="nav-item"
+            href="#"
+            onClick={() =>
+              dispatch({
+                type: "LOGOUT",
+              })
+            }
+          >
             Logout
-          </Link>
+          </a>
         </ListGroup.Item>
       </ListGroup>
     </div>

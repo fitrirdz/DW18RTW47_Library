@@ -1,8 +1,11 @@
 import React, { useContext } from "react";
+import { CartContext } from "../context/cartContext";
 import SideBar from "../components/SideBar";
 import { Link } from "react-router-dom";
 
 const DetailBuku = () => {
+  const [state, dispatch] = useContext(CartContext);
+
   return (
     <div>
       <div className="container">
@@ -78,6 +81,7 @@ const DetailBuku = () => {
               </Link>
               <button className="Button-o mr-1">Add Library</button>
             </div>
+            <div>{JSON.stringify(state)}</div>
           </div>
         </div>
       </div>
