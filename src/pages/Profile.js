@@ -103,7 +103,7 @@ const Profile = () => {
             <div className='row'>
               <div className='col-sm-3'>
                 <div className='card' style={{ border: 'none' }}>
-                  <img src={require('../images/BlockChain.svg')}></img>
+                  <img alt='' src={require('../images/BlockChain.svg')}></img>
                   <h5>Blockchain with Hyperledger</h5>
                   <p className='subtitle'>Author</p>
                 </div>

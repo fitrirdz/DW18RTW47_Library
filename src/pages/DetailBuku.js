@@ -1,46 +1,47 @@
-import React, { useContext } from "react";
-import SideBar from "../components/SideBar";
-import { Link } from "react-router-dom";
+import React from 'react';
+import SideBar from '../components/SideBar';
+import { Link } from 'react-router-dom';
 
 const DetailBuku = () => {
   return (
     <div>
-      <div className="container">
-        <div className="row mt-3">
-          <div className="col-3">
+      <div className='container'>
+        <div className='row mt-3'>
+          <div className='col-3'>
             <SideBar />
           </div>
-          <div className="col-9">
-            <div className="d-flex flex-row" style={{ height: "400px" }}>
-              <div className="d-flex flex-column">
+          <div className='col-9'>
+            <div className='d-flex flex-row' style={{ height: '400px' }}>
+              <div className='d-flex flex-column'>
                 <img
-                  src={require("../images/TessRoad.svg")}
-                  style={{ height: "400px", textAlign: "center" }}
+                  alt=''
+                  src={require('../images/TessRoad.svg')}
+                  style={{ height: '400px', textAlign: 'center' }}
                 ></img>
               </div>
               <div
-                className="d-flex flex-column justify-content-between pl-4"
-                style={{ height: "100%" }}
+                className='d-flex flex-column justify-content-between pl-4'
+                style={{ height: '100%' }}
               >
                 <div>
                   <h3>Tess on The Road</h3>
-                  <p className="subtitle">Rachel Hartman</p>
+                  <p className='subtitle'>Rachel Hartman</p>
                 </div>
                 <div>
                   <h6>Publication date</h6>
-                  <p className="subtitle">April 2020</p>
+                  <p className='subtitle'>April 2020</p>
                 </div>
                 <div>
                   <h6>Category</h6>
-                  <p className="subtitle">Sci-Fi</p>
+                  <p className='subtitle'>Sci-Fi</p>
                 </div>
                 <div>
                   <h6>Pages</h6>
-                  <p className="subtitle">436</p>
+                  <p className='subtitle'>436</p>
                 </div>
                 <div>
-                  <h6 style={{ color: "red" }}>ISBN</h6>
-                  <p className="subtitle">9781789807554</p>
+                  <h6 style={{ color: 'red' }}>ISBN</h6>
+                  <p className='subtitle'>9781789807554</p>
                 </div>
               </div>
             </div>
@@ -48,7 +49,7 @@ const DetailBuku = () => {
             <div>
               <article>
                 <h4>About This Book</h4>
-                <p className="subtitle">
+                <p className='subtitle'>
                   In the medieval kingdom of Goredd, women are expected to be
                   ladies, men are their protectors, and dragons get to be
                   whomever they want. Tess, stubbornly, is a troublemaker. You
@@ -72,11 +73,11 @@ const DetailBuku = () => {
                 </p>
               </article>
             </div>
-            <div class="d-flex flex-row-reverse">
-              <Link to="/baca">
-                <button className="Button-g">Read Book</button>
+            <div class='d-flex flex-row-reverse'>
+              <Link to='/baca'>
+                <button className='Button-g'>Read Book</button>
               </Link>
-              <button className="Button-o mr-1">Add Library</button>
+              <button className='Button-o mr-1'>Add Library</button>
             </div>
           </div>
         </div>

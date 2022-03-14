@@ -1,16 +1,16 @@
-import React, { Component } from "react";
-import { ReactReader } from "react-reader";
-import NavBar from "../components/NavBar";
+import React from 'react';
+import { ReactReader } from 'react-reader';
+import NavBar from '../components/NavBar';
 
 const Baca = () => {
   return (
-    <div className="container">
-      <div className="row"></div>
+    <div className='container'>
+      <div className='row'></div>
       <NavBar />
-      <div style={{ position: "relative", height: "100%" }}>
-        {" "}
+      <div style={{ position: 'relative', height: '100%' }}>
+        {' '}
         {/* // * Container needs a height.. */}
-        <p className="subtitle">
+        <p className='subtitle'>
           In the medieval kingdom of Goredd, women are expected to be ladies,
           men are their protectors, and dragons get to be whomever they want.
           Tess, stubbornly, is a troublemaker. You can’t make a scene at your
@@ -30,9 +30,9 @@ const Baca = () => {
           again in this wholly original fantasy.
         </p>
         <ReactReader
-          url={"../books/Harry.epub"}
-          title={"Harry"}
-          location={"epubcfi(/6/2[cover]!/6)"}
+          url={'../books/Harry.epub'}
+          title={'Harry'}
+          location={'epubcfi(/6/2[cover]!/6)'}
           locationChanged={(epubcifi) => console.log(epubcifi)}
         />
       </div>
