@@ -1,5 +1,5 @@
 body {
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .App {
@@ -42,7 +42,7 @@ body {
   background-color: lightgray;
   border: none;
   border-radius: 8px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .Button-g:hover {
@@ -65,7 +65,7 @@ body {
   background-color: #ee4622;
   border: none;
   border-radius: 8px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .Button-o:hover {
@@ -131,6 +131,18 @@ body {
   color: #000000;
 }
 
+.link {
+  padding: 0;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.link:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
 .logos {
   width: 25px;
   height: auto;
@@ -144,12 +156,12 @@ body {
   top: 0px;
 
   background: #ffffff;
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 .subtitle {
   color: gray;
   text-align: justify;
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 @keyframes App-logo-spin {
