@@ -1,11 +1,7 @@
 import React from 'react';
 import { Modal, Form } from 'react-bootstrap';
-import UseModal from './UseModal';
-import SignIn from './SignIn';
 
-const SignUp = ({ isShowing, toggle }) => {
-  const { showSignIn, toggleSignIn } = UseModal();
-
+const SignUp = ({ isShowing, toggle, toggleSignIn }) => {
   return (
     <Modal show={isShowing} keyboard={false} centered onHide={toggle}>
       <Modal.Body>
@@ -53,7 +49,6 @@ const SignUp = ({ isShowing, toggle }) => {
           <button className='link' onClick={toggleSignIn}>
             Here
           </button>
-          <SignIn showSignIn={showSignIn} toggleSignIn={toggleSignIn} />
         </p>
       </Modal.Body>
     </Modal>

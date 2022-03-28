@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SignUp from '../components/SignUp';
 import SignIn from '../components/SignIn';
-import UseModal from '../components/UseModal';
 import '../App.css';
 
 const Landing = () => {
-  const { isShowing, toggle } = UseModal();
-  const { showSignIn, toggleSignIn } = UseModal();
+  const [isShowing, setIsShowing] = useState(false);
+  const [showSignIn, setShowSignIn] = useState(false);
+
+  function toggle() {
+    setShowSignIn(false);
+    setIsShowing(!isShowing);
+  }
+
+  function toggleSignIn() {
+    setIsShowing(false);
+    setShowSignIn(!showSignIn);
+  }
 
   return (
     <div>
@@ -42,8 +51,20 @@ const Landing = () => {
               >
                 Sign In
               </button>
-              <SignUp isShowing={isShowing} toggle={toggle} />
-              <SignIn showSignIn={showSignIn} toggleSignIn={toggleSignIn} />
+              {isShowing && (
+                <SignUp
+                  isShowing={isShowing}
+                  toggle={toggle}
+                  toggleSignIn={toggleSignIn}
+                />
+              )}
+              {showSignIn && (
+                <SignIn
+                  showSignIn={showSignIn}
+                  toggle={toggle}
+                  toggleSignIn={toggleSignIn}
+                />
+              )}
             </div>
           </div>
 

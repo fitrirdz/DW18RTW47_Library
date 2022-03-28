@@ -2,12 +2,8 @@ import React, { useState, useContext } from 'react';
 import { CartContext } from '../context/cartContext';
 import { Modal } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import UseModal from '../components/UseModal';
-import SignUp from './SignUp';
 
-const SignIn = ({ showSignIn, toggleSignIn }) => {
-  const { isShowing, toggle } = UseModal();
-
+const SignIn = ({ showSignIn, toggle, toggleSignIn }) => {
   const [state, dispatch] = useContext(CartContext);
 
   const [formData, setFormData] = useState({
@@ -80,7 +76,6 @@ const SignIn = ({ showSignIn, toggleSignIn }) => {
             Here
           </button>
         </p>
-        <SignUp isShowing={isShowing} toggle={toggle} />
       </Modal.Body>
     </Modal>
   );
